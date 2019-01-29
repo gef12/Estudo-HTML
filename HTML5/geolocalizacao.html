@@ -1,0 +1,45 @@
+<script type="text/javascript">
+	
+	function getLocation()
+	{
+		if(navigator.geolocation)
+		{
+			navigator.geolocation.getCurrentPosition(getPosition);
+		}
+		else
+		{
+			alert("Geolocalização não suportada");
+		}
+	}
+
+	function getPosition(posicao)
+	{
+		document.getElementById("la").value = posicao.coords.latitude;
+		document.getElementById("lo").value = posicao.coords.longitude;
+	}
+</script>
+
+
+<form>
+	
+	<div>
+		Latidude:
+		<br>
+		<input type="text" name="latitude" id="la">
+	</div>
+
+	<div>
+		Longitude:
+		<br>
+		<input type="text" name="longitude" id="lo">
+	</div>
+
+	<div>
+		<br>
+		<input type="button" value="Exibir" onclick="getLocation();">
+	</div>
+
+
+
+
+</form>

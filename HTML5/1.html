@@ -1,0 +1,12 @@
+<script type="text/javascript">
+	function t(){if (window.webkitNotifications.checkPermission() == 0) {
+    		return window.webkitNotifications.createNotification("", "HEHE", "OK!");
+    	}}
+</script>
+
+<body>
+<form onload="t();">
+	Nome: <input type="text" id="nome"/>
+	<input type="button" value="Salvar" onclick="salvar();"/>
+</form>
+</body>

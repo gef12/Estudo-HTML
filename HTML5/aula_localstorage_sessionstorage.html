@@ -1,0 +1,16 @@
+<script type="text/javascript">
+	function salvar(){
+		sessionStorage.setItem("l_nome", document.getElementById("nome").value);
+	}
+
+function exibir(){
+		document.getElementById("nome").value = sessionStorage.getItem("l_nome");
+	}
+</script>
+
+<body onload="exibir();">
+<form>
+	Nome: <input type="text" id="nome"/>
+	<input type="button" value="Salvar" onclick="salvar();"/>
+</form>
+</body>
